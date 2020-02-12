@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Busca de livros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="AllBooks.php"><b>Listar</b></a>
+        &nbsp;
+        <a href="SearchBook.html"><b>Pesquisar</b></a>
+        &nbsp;
+        <a href="RegisterBook.html"><b>Cadastrar</b></a>
+        &nbsp;
+        <a href="DeleteBook.html"><b>Excluir</b></a>
+        &nbsp;
+        <hr></hr>
+
+        <form action="SearchResults.php" method="post">
+            <table>
+                <tr><td><label for="searchtype">Tipo de pesquisa</label></td></tr>
+                <tr><td>
+                        <select name="searchtype" id="searchtype" />
+                            <option value="autor">Autor</option>
+                            <option value="isbn">ISBN</option>  
+                            <option value="titulo">Titulo</option>
+                            <option value="idlivros">Codigo</option>
+                        </select>
+                </td></tr>
+                
+                <tr><td><label for="serchterm">Termo de pesquisa:</label></td></tr>
+                <tr><td><input type="text" name="searchterm" id="searchterm" /></td></tr>
+                <tr><td><input type="submit" value="Busca" /></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
