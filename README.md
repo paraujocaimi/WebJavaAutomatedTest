@@ -55,14 +55,14 @@ Um cliente possui um software web para sua livraria, porém ele deseja realizar 
 
 No arquivo Biblioteca.feature dentro da pasta src/test/resource package feature, está o nosso BDD de teste 
 
-![Biblioteca BDD](/src/test/resources/img/bibliotecaFeature.jpg)
+![Biblioteca BDD](FrameworkJavaWeb\src\test\resources\img\bibliotecaFeature.jpg)
 
 
 <b>Runner:</b> 
 
 No arquivo runTest.java na parta srt/test/java package test está o nosso executor. 
 
-![Biblioteca BDD](/src/test/resources/img/runnerBiblioteca.jpg)
+![Biblioteca BDD](FrameworkJavaWeb\src\test\resources\img\runnerBiblioteca.jpg)
 
 
 ## Envolve
