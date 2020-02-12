@@ -45,7 +45,7 @@ formatter.match({
   "location": "ExampleSteps.given(String)"
 });
 formatter.result({
-  "duration": 4286928600,
+  "duration": 4522111400,
   "status": "passed"
 });
 });
