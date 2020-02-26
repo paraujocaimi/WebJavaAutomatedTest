@@ -8,11 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import utils.environment.SetUpEnvironment;
+import utils.report.Screenshot;
 
 public class GooglePage extends GoogleElementPage {
 
     WebDriver driver;
     SetUpEnvironment setUpEnvironment = new SetUpEnvironment();
+    Screenshot screenshot = new Screenshot();
 
     public void initTest(String url) {
         setUpEnvironment.upApplication(url);
@@ -23,6 +25,7 @@ public class GooglePage extends GoogleElementPage {
     public boolean search(String search) {
         Actions actions = new Actions(driver);
         boolean isSearch = false;
+        screenshot.takeScreenShot();
 
         try {
             inputPesquisar.sendKeys(search);
@@ -68,6 +71,7 @@ public class GooglePage extends GoogleElementPage {
         boolean isGoogleNews = false;
         try {
             firstSearch.click();
+            isGoogleNews = true;
         }catch (ElementClickInterceptedException e) {
             e.printStackTrace();
             System.out.println("Não foi possível clicar");

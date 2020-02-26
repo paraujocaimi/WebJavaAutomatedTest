@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import utils.environment.OpenApplication;
 import utils.environment.SetUpEnvironment;
 
@@ -19,4 +20,6 @@ import utils.environment.SetUpEnvironment;
 public class GoogleTest {
 
 
+
 }
+

@@ -2,30 +2,40 @@ package utils.environment;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import utils.fileReader.PropertiesFile;
 
-import java.io.IOException;
 import java.util.Properties;
 
-public class setUp {
+public class SetUpEnvironment {
 
     public static WebDriver driver;
     public static String browser;
-    public static Properties prop;
+    public PropertiesFile propertiesFile;
+    public Properties prop;
+
+    public static String getBrowser() {
+        return browser;
+    }
+
+    public static void setBrowser(Properties prop) {
+        SetUpEnvironment.browser = prop.getProperty("browser");
+    }
 
     public Properties getProp() {
         return prop;
     }
 
-    public void setProp(Properties prop) {
-        this.prop = new PropertiesFile().ReadPropertiesFile();
+    public void setProp(PropertiesFile propFile) {
+        this.prop = propFile.ReadPropertiesFile();
     }
 
     public void upApplication(String url){
 
-        browser  = this.getProp().getProperty("browser");
+        setProp(propertiesFile);
+        setBrowser(this.prop);
 
-        if (browser.equals("chrome")) {
+        if (this.browser.equals("chrome")) {
             setChromeDriver(driver);
         } else {
             System.out.println("Navegador não encontrado!");
@@ -33,18 +43,22 @@ public class setUp {
         openBrowser(url);
     }
 
-    public static WebDriver getDriver() {
-        return driver;
+    public WebDriver getDriver() {
+        return this.driver;
     }
 
-    private static void setChromeDriver(WebDriver driver) {
+    private void setChromeDriver(WebDriver driver) {
         System.setProperty("webdriver.chrome.driver", "C:\\DRIVERS\\chromedriver.exe");
-        setUp.driver = new ChromeDriver();
+        this.driver = new ChromeDriver();
     }
 
-    public static void openBrowser(String url){
-        driver.manage().window().maximize();
-        driver.get(url);
+    public void openBrowser(String url){
+        this.driver.manage().window().maximize();
+        this.driver.get(url);
+    }
+
+    public void closeDriver(){
+        this.driver.close();
     }
 
 }

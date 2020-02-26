@@ -35,4 +35,7 @@ public class GoogleSteps {
 		Assert.assertTrue("Didn't click in the first search", examplePage.clickFirstSearch());
 	}
 
+	@And("^close application$")
+	public void closeDriver(){ setUpEnvironment.closeDriver();}
+
 }

@@ -1,4 +1,4 @@
-package utils;
+package utils.environment;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/*
+	@deprecated
+	The new class of set Up the environment is SetUpEnvironment
+ */
 public class OpenApplication {
 
 	private static WebDriver driver;

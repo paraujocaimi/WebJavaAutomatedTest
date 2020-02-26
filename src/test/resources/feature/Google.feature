@@ -1,5 +1,6 @@
 # UTF-8
 
+#noinspection CucumberUndefinedStep
 Feature: Open Google
 
   Background:
@@ -10,4 +11,5 @@ Feature: Open Google
     When search about "news"
     And click to search
     Then click in the first search
+    And close application
 
