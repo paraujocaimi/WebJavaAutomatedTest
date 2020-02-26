@@ -8,13 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import utils.environment.SetUpEnvironment;
-import utils.report.Screenshot;
+import utils.report.TakeScreenshot;
 
 public class GooglePage extends GoogleElementPage {
 
     WebDriver driver;
     SetUpEnvironment setUpEnvironment = new SetUpEnvironment();
-    Screenshot screenshot = new Screenshot();
+    TakeScreenshot screenshot = new TakeScreenshot();
 
     public void initTest(String url) {
         setUpEnvironment.upApplication(url);
@@ -25,7 +25,7 @@ public class GooglePage extends GoogleElementPage {
     public boolean search(String search) {
         Actions actions = new Actions(driver);
         boolean isSearch = false;
-        screenshot.takeScreenShot();
+        screenshot.takeFullPageScreenshot();
 
         try {
             inputPesquisar.sendKeys(search);
