@@ -13,8 +13,18 @@ public class ExampleSteps {
 	private static WebDriver driver;
 	ExamplePage examplePage = new ExamplePage();
 
-	@Given("^acesso a pagina \"(.*)\"$")
-	public void given(String url) {
+	@Given("^acess the page \"(.*)\"$")
+	public void acessPage(String url) {
 		examplePage.setClasse(url);
+	}
+
+	@When("^search about \"(.*)\"$")
+	public void given(String search) {
+		examplePage.search(search);
+	}
+
+	@Then("^click in the first search$")
+	public void clickFirstSearch(){
+		examplePage.clickFirstSearch();
 	}
 }

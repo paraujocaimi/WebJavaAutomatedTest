@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty", "html:target/cucumber-report", "json:target/cucumber.json",
         "junit:target/cucumber.xml" },
-        tags = {"@ExampleTest" }, strict = true, features = "src/test/resources/feature", glue = { "classpath:step"}, monochrome = true, dryRun = false)
+        tags = {"@Test" }, strict = true, features = "src/test/resources/feature", glue = { "classpath:step"}, monochrome = true, dryRun = false)
 
 public class LocalTest {
 
