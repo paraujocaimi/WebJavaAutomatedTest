@@ -5,8 +5,9 @@ Feature: Open Google
   Background:
     Given acess the page "https://www.google.com/"
 
-  @Test
+  @GoogleTest
   Scenario: A scenario
     When search about "news"
+    And click to search
     Then click in the first search
 

@@ -3,15 +3,15 @@ package elementPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ExampleElementPage {
+public class GoogleElementPage {
 
     @FindBy(xpath="//input[@title='Pesquisar']")
     protected WebElement inputPesquisar;
 
-    @FindBy(xpath="//input[@name='btnK']")
+    @FindBy(xpath="//div[@class='FPdoLc tfB0Bf']/center/input[@name='btnK']")
     protected WebElement btnPesquisar;
 
-    @FindBy(xpath="//input[@name='btnI']")
+    @FindBy(xpath="//div[@class='FPdoLc tfB0Bf']/center/input[@name='btnI']")
     protected WebElement btnEstouComSorte;
 
     @FindBy(xpath = "//div[@class='g'][1]/.//a")
