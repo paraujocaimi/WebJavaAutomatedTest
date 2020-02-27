@@ -72,7 +72,7 @@ If you would like to take a screenshot during the test, we have some methods to 
 ```
     highlightWithText(WebElement element, String text)
 ```
-![bluer](src\test\resources\readme\highlithwithtext.png)
+![bluer](src\\test\\resources\\readme\\highlithwithtext.png)
 
 
 ## Envolve
