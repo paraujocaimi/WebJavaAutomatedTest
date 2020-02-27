@@ -25,7 +25,7 @@ public class GooglePage extends GoogleElementPage {
     public boolean search(String search) {
         Actions actions = new Actions(driver);
         boolean isSearch = false;
-        screenshot.takeFullPageScreenshot();
+        screenshot.takeSnapShot();
 
         try {
             inputPesquisar.sendKeys(search);
@@ -41,6 +41,12 @@ public class GooglePage extends GoogleElementPage {
             e.printStackTrace();
             System.out.println("Exception");
         }
+
+        screenshot.blurTheElement(inputPesquisar);
+        screenshot.highlightTheElement(inputPesquisar);
+        screenshot.highlightWithText(inputPesquisar, "Using text on screenshot");
+        screenshot.imageWithTitle(inputPesquisar, "Using Title on screenshot");
+
         return isSearch;
     }
 
@@ -51,6 +57,7 @@ public class GooglePage extends GoogleElementPage {
         try {
             actions.moveToElement(btnPesquisar);
             actions.perform();
+            screenshot.highlightTheElement(btnPesquisar);
             btnPesquisar.click();
             isClicked = true;
         }catch (ElementClickInterceptedException e) {
