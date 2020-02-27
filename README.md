@@ -48,25 +48,25 @@ If you would like to take a screenshot during the test, we have some methods to 
 ```
     takeSnapShot() 
 ```
-![fullscreenshot](src\test\resources\readme\fullscreenshot.png)
+![fullscreenshot](src/test/resources/readme/fullscreenshot.png)
 
 - ### Title in the image
 ```
     imageWithTitle(WebElement element, String title)
 ```
-![title](src\test\resources\readme\title.png)
+![title](src/test/resources/readme/title.png)
 
 - ### To blur the element use the method. 
 ```
     blurTheElement(WebElement element)
 ```
-![blur](src\test\resources\readme\blur.png)
+![blur](src/test/resources/readme/blur.png)
 
 - ### High Light element 
 ```
     highlightTheElement(WebElement element)
 ```
-![highlith](src\test\resources\readme\highlith.png)
+![highlith](src/test/resources/readme/highlith.png)
 
 - ### High Light element with text
 ```
